@@ -1,0 +1,19 @@
+---
+# disable all script to avoid including jQuery
+bootstrapVersion: 3
+loglevel: debug
+scripts:
+  transition: false
+  alert: false
+  button: false
+  carousel: false
+  collapse: false
+  dropdown: false
+  modal: false
+  tooltip: false
+  popover: false
+  scrollspy: false
+  tab: false
+  affix: false
+styleLoaders: [ 'style', 'css', 'sass' ]
+styles: true

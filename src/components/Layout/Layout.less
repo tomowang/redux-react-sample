@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+body {
+  background-color: #f1f4f7;
+  margin-top: 40px;
+}
+
+.content-wrapper {
+  transition: all 0.3s ease;
+  padding: 5px;
+
+  @media (min-width: 768px) {
+    padding: 10px 20px 20px 20px;
+    margin-left: @sidebarWidth;
+
+    &.content-wrapper-expanded {
+      margin-left: @sidebarCollapsedWidth;
+    }
+  }
+}

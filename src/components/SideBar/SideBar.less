@@ -1,0 +1,78 @@
+@import "../../styles/variables";
+
+@bgColor: #2f4050;
+
+.sidebar {
+  position: fixed;
+  width: @sidebarWidth;
+  transition: all 0.3s ease;
+  height: 100%;
+  background-color: @bgColor;
+  top: 0;
+  left: -@sidebarWidth;
+  z-index: 99;
+
+  @media (min-width: 768px) {
+    left: 0;
+  }
+
+  &.sidebar-collapsed {
+    left: 0;
+
+    @media (min-width: 768px) {
+      width: @sidebarCollapsedWidth;
+
+      .collapsed-hide {
+        display: none;
+      }
+    }
+  }
+
+  header {
+    height: 41px;
+    line-height: 41px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid darken(@bgColor, 5%);
+
+    img {
+      height: 35px;
+    }
+  }
+
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      height: 43px;
+      line-height: 43px;
+
+      a {
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+        color: #bec4ca;
+        font-size: 14px;
+        padding-left: 24px;
+        text-decoration: none;
+
+        &:hover, &.router-link-active {
+          border-left: 4px solid #19aa8d;
+          background-color: #293846;
+          padding-left: 20px;
+          color: white;
+        }
+
+        .fa {
+          font-size: 16px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
